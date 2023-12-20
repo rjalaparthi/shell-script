@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "Please enter username"
 read -s USERNAME #value enetered above will be stored in USERNAME
