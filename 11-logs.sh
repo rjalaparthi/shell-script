@@ -1,5 +1,6 @@
 #!/bin/bash
 ID=$(id -u)
+
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
 LOG_FILE="/tmp/$0-$TIMESTAMP.log
@@ -25,10 +26,10 @@ else
     echo "You are root user"
 fi #reverse of if, indication condition is end
 
-yum install mysql -y &>> $LOG_FILE
+yum install mysql -y
 
 VALIDATE $? "Installing mysql"
 
-yum install git -y &>> $LOG_FILE
+yum install git -y
 
 VALIDATE $? "Installing git"
