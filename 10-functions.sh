@@ -1,5 +1,17 @@
 #!/bin/bash
 ID=$(id -u)
+
+VALIDATE(){
+if  [ $1 -ne 0 ]
+then
+    echo "Error :: $2 ... Failed"
+    exit 1
+else 
+    echo "installing $2 is sucessfull"
+fi 
+
+}
+
 if [ $ID -ne 0 ]
 then
     echo "Error :: Please run this script with root access"
@@ -10,20 +22,8 @@ fi #reverse of if, indication condition is end
 
 yum install mysql -y
 
-if  [ $? -ne 0 ]
-then
-    echo "Error :: Installing mysql is failed"
-    exit 1
-else 
-    echo "installing mysql is sucessfull"
-fi    
+VALIDATE $? "Installing mysql"
 
 yum install git -y
 
-if [ $? -ne 0 ]
-then
-    echo "Error:: Inatlling git is failure"
-    exit 1
-else
-    echo "Inatlling git is Successful" 
-fi    
+VALIDATE $? "Installing git"
