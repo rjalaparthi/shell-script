@@ -3,17 +3,23 @@ ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
+
+
 LOG_FILE="/tmp/$0-$TIMESTAMP.log"
 
 
-echo "script name is $0"
+
 VALIDATE(){
 if  [ $1 -ne 0 ]
 then
-    echo "Error :: $2 ... Failed"
+    echo -e " Error :: $2 ... $R Failed $N"
     exit 1
 else 
-    echo "installing $2 is sucessfull"
+    echo -e "installing $2 is $G sucessfull $N"
 fi 
 
 }
