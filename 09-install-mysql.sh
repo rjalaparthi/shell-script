@@ -8,9 +8,9 @@ else
     echo "You are root user"
 fi #reverse of if
 
-yum install mysql -y
+yum install mysqlll -y
 
-if[ $? -ne 0 ]
+if  [ $? -ne 0 ]
 then
     echo "Error :: Installing mysql is failed"
     exit 1
