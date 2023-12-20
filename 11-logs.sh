@@ -19,7 +19,7 @@ then
     echo -e " Error :: $2 ... $R Failed $N"
     exit 1
 else 
-    echo -e "installing $2 is $G sucessfull $N"
+    echo -e "$2 is $G sucessfull $N"
 fi 
 
 }
