@@ -1,4 +1,4 @@
 #!bib/bash
 
 DATE=$(date)
-echo "Date and Time is : $DATE"
+echo "Script Started executing : $DATE"
