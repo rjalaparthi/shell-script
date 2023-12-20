@@ -11,7 +11,7 @@ N="\e[0m"
 
 LOG_FILE="/tmp/$0-$TIMESTAMP.log"
 
-
+echo "Script started executing at $TIMESTAMP" &>> $LOG_FILE
 
 VALIDATE(){
 if  [ $1 -ne 0 ]
